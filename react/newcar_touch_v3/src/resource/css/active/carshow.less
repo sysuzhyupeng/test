@@ -1,0 +1,276 @@
+@import "../base.less";
+@csImg: '../../img/active/carshow';
+
+.cs-hd {
+	.pr;
+	width: 100%;
+	height: 2.94rem;
+	.auto;
+	background: url("@{csImg}/head.jpg") no-repeat;
+	background-size: cover;
+}
+.cs-hd-logo {
+	.pa;
+	left: .2rem;
+	top: .2rem;
+	padding: .1rem;
+	background-color: #fff;
+	i {
+		.block;
+		width: 1.46rem;
+		height: .3rem;
+		background: url("../../img/newcar-logo.png") no-repeat;
+		background-size: cover;
+	}
+}
+
+.cs-main {
+	padding: .2rem .2rem 1rem;
+	.auto;
+	background: url("@{csImg}/back.jpg") repeat-y;
+	background-size: 100%;
+}
+.cs-nav {
+	display: -webkit-box;
+	-webkit-box-pack: justify;
+}
+.cs-nav-item {
+	.block;
+	color: #fff;
+	.fb;
+}
+
+.cs-title {
+	.block;
+	box-sizing: border-box;
+	width: 100%;
+	height: .95rem;
+	padding-top: .27rem;
+	.auto;
+	background: url("@{csImg}/title.png") no-repeat;
+	background-size: cover;
+}
+.cs-title-name {
+	.block;
+	width: 2.5rem;
+	height: .4rem;
+	background: url("@{csImg}/title-name.png") no-repeat;
+	background-size: 100%;
+	.auto;
+	&.top {
+		background-position: 0 0;
+	}
+	&.first {
+		background-position: 0 -.4rem
+	}
+	&.new {
+		background-position: 0 -.8rem
+	}
+	&.expose {
+		background-position: 0 -1.2rem
+	}
+	&.picture {
+		background-position: 0 -1.6rem
+	}
+	&.tidbits {
+		background-position: 0 -2rem
+	}
+}
+
+.cs-blank {
+	line-height: .7rem;
+	.tc;
+	background-color: #fff;
+}
+//車展頭條
+.cs-top-banner {
+	.pr;
+	height: 4.8rem;
+	background-color: #fff;
+	overflow: hidden;
+	&.initial {
+		height: initial;
+	}
+}
+.cs-top-box {
+	.pr;
+	padding: .1rem 0;
+}
+.cs-top-item, .cs-picture-item {
+	.fl;
+	width: 6.9rem;
+	margin-left: .1rem;
+}
+.cs-top-link {
+	.pr;
+	.fl;
+	width: 3.4rem;
+	height: 2.25rem;
+	margin: 0 0 .1rem .1rem;
+	&:nth-child(2n+1) {
+		margin-left: 0;
+	}
+	img {
+		.block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	p {
+		.pa;
+		left: 0;
+		bottom: 0;
+		box-sizing: border-box;
+		width: 100%;
+		padding: 0 .1rem;
+		line-height: .4rem;
+		font-size: .24rem;
+		background-color: rgba(0, 0, 0, 0.3);
+		color: #fff;
+		.ellipsis;
+	}
+}
+.cs-top-pagination, .cs-expose-pagination, .cs-picture-pagination, .cs-tidbits-pagination {
+	a {
+		&.slide_btn_prev, &.slide_btn_next {
+			.pa;
+			top: 50%;
+			margin-top: -.5rem;
+			width: .4rem;
+			height: 1rem;
+			border: none;
+			background-color: #8c8d8f;
+		}
+		&.slide_btn_prev {
+			left: 0;
+			&:after {
+				.arrow(.2rem, .2rem, 2px, #fff, -45deg);
+				.pa;
+				left: .1rem;
+				top: .4rem;
+			}
+		}
+		&.slide_btn_next {
+			right: 0;
+			&:after {
+				.arrow(.2rem, .2rem, 2px, #fff, 135deg);
+				.pa;
+				right: .1rem;
+				top: .4rem;
+			}
+		}
+	}
+}
+
+//首發新車
+.cs-first {
+	background-color: #fff;
+}
+.cs-first-item {
+	.pr;
+	.block;
+	box-sizing: border-box;
+	padding: .2rem .2rem .2rem 2.55rem;
+	height: 1.9rem;
+}
+.cs-first-pic {
+	.pa;
+	left: .2rem;
+	top: .2rem;
+	width: 2.25rem;
+	height: 1.5rem;
+	img {
+		.block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	p {
+		.pa;
+		left: 0;
+		bottom: 0;
+		box-sizing: border-box;
+		width: 100%;
+		padding: 0 .1rem;
+		line-height: .32rem;
+		font-size: .24rem;
+		background-color: rgba(0, 0, 0, 0.3);
+		color: #fff;
+		.ellipsis;
+	}
+}
+.cs-first-title {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	font-size: .36rem;
+	color: #000;
+}
+.cs-first-main {
+	.pr;
+	box-sizing: border-box;
+	padding-top: .05rem;
+	height: 1.5rem;
+}
+.cs-first-info {
+	.pa;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	font-size: .28rem;
+}
+
+//現場直播
+.cs-tidbits-banner {
+	.pr;
+	height: 3.1rem;
+	padding: .1rem 0;
+	background-color: #fff;
+	overflow: hidden;
+}
+.cs-tidbits-box {
+	.pr;
+	height: 3.1rem;
+}
+.cs-tidbits-item {
+	.fl;
+	width: 6.8rem;
+	margin-left: .15rem;
+}
+.cs-tidbits-link {
+	.pr;
+	.fl;
+	width: 2.2rem;
+	height: 3.1rem;
+	margin-left: .1rem;
+	&:first-child {
+		margin-left: 0;
+	}
+	img {
+		.block;
+		width: 100%;
+		height: 2.2rem;
+		object-fit: cover;
+	}
+	p {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		line-height: .4rem;
+		margin-top: .1rem;
+		font-size: .24rem;
+		word-break: break-all;
+	}
+}
+.cs-tidbits-icon {
+	.pa;
+	left: .6rem;
+	top: .6rem;
+	width: 1rem;
+	height: 1rem;
+	background: url("@{csImg}/play.png") no-repeat;
+	background-size: cover;
+	z-index: 1;
+}

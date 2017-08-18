@@ -1,0 +1,213 @@
+@import "base.less";
+
+.flt-wrap {
+	padding-bottom: 1rem;
+}
+.flt-box {
+	background-color: #fff;
+}
+.flt-title {
+	padding-left: .2rem;
+	line-height: 1rem;
+}
+
+.flt-cd {
+	padding: 0 .2rem;
+	line-height: .6rem;
+	background-color: #f9fafc;
+	font-size: .28rem;
+	color: #999;
+	white-space: nowrap;
+	overflow: auto;
+}
+
+.flt-item {
+	.fl;
+	box-sizing: border-box;
+	width: 33.33%;
+	margin-bottom: .4rem;
+	.tc;
+	font-size: .28rem;
+	&.at {
+		.flt-item-inner {
+			background-color: @mainTextColor;
+			color: #fff;
+			border: 0;
+		}
+	}
+}
+.flt-item-inner {
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 0 .1rem;
+	min-width: 1.5rem;
+	height: .5rem;
+	border: 1px solid #ccc;
+	border-radius: .08rem;
+	margin: 0 auto;
+	line-height: .5rem;
+	.tc;
+}
+
+.flt-car-icon {
+	.block;
+	width: 1.5rem;
+	height: 1.125rem;
+	margin: 0 auto;
+	background: url('../img/filter/filter-icon.png') no-repeat;
+	background-size: 200%;
+}
+.flt-car-icon-1 {
+	background-position: 0 -4.5rem;
+    &.at {
+    	background-position: -1.5rem -4.5rem;
+    }
+}
+.flt-car-icon-2 {
+    background-position: 0 -2.25rem;
+    &.at {
+    	background-position: -1.5rem -2.25rem;
+    }
+}
+.flt-car-icon-3 {
+    &.at {
+    	background-position: -1.5rem 0;
+    }
+}
+.flt-car-icon-4 {
+    background-position: 0 -1.125rem;
+    &.at {
+    	background-position: -1.5rem -1.125rem;
+    }
+}
+.flt-car-icon-5 {
+    background-position: 0 -6.75rem;
+    &.at {
+    	background-position: -1.5rem -6.75rem;
+    }
+}
+.flt-car-icon-6 {
+    background-position: 0 -7.875rem;
+    &.at {
+    	background-position: -1.5rem -7.875rem;
+    }
+}
+.flt-car-icon-7 {
+    background-position: 0 -3.375rem;
+    &.at {
+    	background-position: -1.5rem -3.375rem;
+    }
+}
+.flt-car-icon-8 {
+    background-position: 0 -5.625rem;
+    &.at {
+    	background-position: -1.5rem -5.625rem;
+    }
+}
+.flt-car-name {
+	.block;
+	margin-top: .3rem;
+}
+
+//價格
+.flt-price {
+	padding: .1rem .7rem .7rem
+}
+.flt-brand-more {
+    .block;
+    width: 7rem;
+    height: .68rem;
+    border: 1px solid #599aeb;
+    line-height: .68rem;
+    .tc;
+    margin: 0 auto;
+    color: #599aeb;
+    background-color: #ecf4fd;
+}
+
+//底部
+.flt-foot {
+	.fx;
+	bottom: 0;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: @max-width;
+	height: 1rem;
+	padding: .1rem .2rem;
+	background-color: #fff;
+	z-index: 1;
+}
+.flt-foot-reset {
+	.fl;
+	box-sizing: border-box;
+	width: 2.1rem;
+	height: .8rem;
+	border: 1px solid #599aeb;
+	border-radius: .1rem;
+	line-height: .8rem;
+	.tc;
+	background-color: #ecf4fd;
+	color: #599aeb;
+}
+.flt-foot-all {
+	.fr;
+	width: 4.7rem;
+	height: .8rem;
+	border-radius: .1rem;
+	line-height: .8rem;
+	.tc;
+	background-color: #599aeb;
+	color: #fff;
+}
+
+
+/* 選車結果頁 */
+.flt-autos-cd {
+	padding: 0 .2rem;
+	line-height: .7rem;
+	border-bottom: 1px solid @mainBorder;
+	background-color: #fff;
+	font-size: .28rem;
+	color: #999;
+	white-space: nowrap;
+	overflow: auto;
+}
+.flt-autos-list {
+	background-color: #fff;
+}
+.flt-autos-item {
+	.fl;
+	box-sizing: border-box;
+	width: 50%;
+	padding: .4rem;
+	.tc;
+}
+.flt-autos-img {
+	.block;
+	width: 2.7rem;
+	height: 1.8rem;
+	margin: 0 auto;
+	object-fit: cover;
+}
+.flt-autos-title {
+	margin: .2rem 0;
+	.ellipsis;
+}
+.flt-autos-price {
+	color: @mainColor;
+}
+.flt-autos-none {
+	padding: .5rem 0;
+	.tc;
+	line-height: .5rem;
+	color: #333;
+}
+//讓價格圖標一直顯示
+.rc-slider-tooltip {
+	display: block !important;
+}
+.flt-price .rc-slider-handle {
+	width: 20px;
+	height: 20px;
+	margin: -8px 0 0 -10px;
+}

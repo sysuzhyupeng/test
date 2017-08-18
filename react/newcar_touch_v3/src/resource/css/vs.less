@@ -1,0 +1,472 @@
+@import "base.less";
+/*********************** 比較首頁 ********************/
+@vsBorder: #ddd;
+@vsImg: '../img/compare';
+//編輯按鈕
+.vs-edit {
+	.pa;
+	top: 0;
+	right: .2rem;
+	color: @mainTextColor;
+}
+//導航
+.vs-nav-li {
+	.fl;
+	width: 50%;
+	padding: .3rem 0;
+	border-bottom: 2px solid @vsBorder;
+	box-sizing: border-box;
+	background-color: #fff;
+	&:first-child {
+		.vs-nav-link {
+			border-left: 0;
+		}
+	}
+	&.at {
+		border-bottom: 2px solid @mainTextColor;
+		.vs-nav-link {
+			color: @mainTextColor;
+		}
+	}
+}
+.vs-nav-link {
+	.block;
+	border-left: 1px solid @vsBorder;
+	font-size: .36rem;
+	color: #333;
+	.tc;
+}
+//添加車型
+.vs-add {
+	padding: .55rem 0;
+	.tc;
+	font-size: .36rem;
+	background-color: #fff;
+}
+//列表
+.vs-list {
+	padding: 0 .2rem 1rem;
+	background-color: #fff;
+}
+.vs-list-li {
+	.pr;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	box-sizing: border-box;
+	width: 100%;
+	height: 1.1rem;
+	padding-left: .9rem;
+	border-bottom: 1px solid @vsBorder;
+	&:first-child {
+		border-top: 1px solid @vsBorder;
+	}
+}
+.vs-list-icon {
+	.pa;
+	left: .3rem;
+	top: 50%;
+	width: .4rem;
+	height: .4rem;
+	background-color: #fff;
+	border: 1px solid @vsBorder;
+	border-radius: 50%;
+	margin-top: -.2rem;
+	&.at {
+		border: 0;
+		background: url("@{vsImg}/vs-list-icon.png") no-repeat;
+		background-size: 100%;
+	}
+	&.del {
+		border: 0;
+		background: url("@{vsImg}/vs-list-icon.png") no-repeat;
+		background-position: 0 -.4rem;
+		background-size: 100%;
+	}
+}
+//底部
+.vs-foot {
+	.fx;
+	bottom: 0;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: @max-width;
+	height: 1rem;
+	line-height: 1rem;
+	padding: 0 2.5rem 0 .5rem;
+	background-color: #e4e4e5;
+	color: #333;
+}
+.vs-foot-link {
+	.pa;
+	right: 0;
+	top: 0;
+	width: 2.5rem;
+	height: 1rem;
+	.tc;
+	font-size: .36rem;
+	color: #fff;
+	background-color: #b5b5b5;
+	&.at {
+		background-color: #2c579c;
+	}
+}
+.vs-foot-none {
+	.fx;
+	bottom: 0;
+	width: 100%;
+	max-width: @max-width;
+	height: 1rem;
+	line-height: 1rem;
+	background-color: #e4e4e5;
+	color: #333;
+	.tc;
+}
+
+/*********************** 編輯測評比較頁 ********************/
+.vsrt-hd {
+	.pr;
+	padding: .2rem;
+	background-color: #fff;
+}
+.vsrt-hd-li {
+	.fl;
+	width: 3.4rem;
+	margin-left: .3rem;
+	&:first-child {
+		margin-left: 0;
+	}
+	img {
+		.block;
+		width: 100%;
+		height: 2.26rem;
+		object-fit: cover;
+	}
+	p {
+		margin-top: .2rem;
+	}
+}
+.vsrt-hd-pk {
+	.pa;
+	left: 50%;
+	top: 0.93rem;
+	width: .8rem;
+	height: .8rem;
+	line-height: .8rem;
+	margin-left: -.4rem;
+	border-radius: 50%;
+	background-color: #fff;
+	color: @mainTextColor;
+	font-size: .36rem;
+	.fb;
+	.tc;
+	z-index: 1;
+}
+.vsrt-title-big {
+	.block;
+	margin-top: .2rem;
+	line-height: .9rem;
+	font-size: .36rem;
+	background-color: #fff;
+	.tc;
+	.fb;
+}
+.vsrt-title-sm {
+	.block;
+	padding: 0 .2rem;
+	line-height: .6rem;
+	color: #666;
+	.more {
+		.fr;
+		color: #999;
+	}
+}
+.vsrt-main {
+	background-color: #fff;
+}
+.vsrt-main-iframe {
+	.block;
+	width: 980px;
+	border: 0;
+	-webkit-transform-origin-x: 0;
+	-webkit-transform-origin-y: 0;
+}
+
+.vsrt-content {
+	.fl;
+	box-sizing: border-box;
+	width: 50%;
+	padding: .4rem .2rem;
+	dt {
+		width: 100%;
+		height: .7rem;
+		line-height: .7rem;
+		.tc;
+		background-color: #edebeb;
+		&.at {
+			background-color: #c3d2ec;
+		}
+	}
+	dd {
+		margin-top: .4rem;
+		font-size: .28rem;
+	}
+}
+.vsrt-oil {
+	padding-top: .4rem;
+	background-color: #fff;
+	li {
+		.fl;
+		width: 50%;
+	}
+	i {
+		.block;
+		width: 1.3rem;
+		height: 1.4rem;
+		margin: 0 auto;
+		background: url("@{vsImg}/oil.png") no-repeat;
+		background-size: 100%;
+	}
+}
+
+.vsrt-total {
+	.block;
+	height: .9rem;
+	line-height: .9rem;
+	margin: .2rem 0 1px;
+	background-color: #fff;
+	font-size: .4rem;
+	.tc;
+}
+
+/*********************** 規格配備比較頁 ********************/
+@tdWidth: 2.25rem;
+@tdHeight: .84rem;
+//頭部
+.vssd-hd {
+	top: 0;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: @max-width;
+	border: 1px solid @mainBorder;
+	background-color: #fff;
+	z-index: 2;
+}
+.vssd-hd-pk {
+	.pa;
+	width: @tdWidth;
+	height: 2.8rem;
+	line-height: 2.8rem;
+	font-size: @tdHeight;
+	font-style: oblique;
+	color: #666;
+	.tc;
+	.fb;
+	background-color: #fff;
+	z-index: 2;
+}
+.fx {
+	.vssd-hd-pk {
+		height: 1.48rem;
+		line-height: 1.48rem;
+	}
+	.vssd-hd-inner, .vssd-hd-add {
+		height: 1rem;
+	}
+	.vssd-hd-add {
+		line-height: 1rem;
+	}
+	.vssd-hd-inner img {
+		.hide;
+	}
+}
+.vssd-hd-back {
+	.fx;
+	height: 1.48rem;
+	z-index: -1;
+}
+.vssd-hd-box {
+	box-sizing: border-box;
+	width: 100%;
+	padding-left: @tdWidth;
+	overflow: auto;
+}
+.vssd-hd-table {
+	td {
+		word-break: break-all;
+		border: 1px solid #fff;
+	}
+}
+.vssd-hd-inner {
+	.pr;
+	box-sizing: border-box;
+	width: 2.05rem;
+	height: 2.35rem;
+	margin: .2rem .1rem;
+	border: 1px solid @mainBorder;
+	img {
+		.block;
+		width: 100%;
+		height: 1.35rem;
+		object-fit: cover;
+	}
+	p {
+		display: -webkit-box;
+		-webkit-box-align: center;
+		-webkit-box-pack: center;
+		box-sizing: border-box;
+		height: .6rem;
+		line-height: .3rem;
+		margin-top: .2rem;
+		font-size: .24rem;
+		overflow: hidden;
+		.tc;
+	}
+	i {
+		.pa;
+		.tc;
+		font-style: normal;
+		width: .32rem;
+		height: .32rem;
+		line-height: .32rem;
+		border-radius: 50%;
+		right: -.1rem;
+		top: -.16rem;
+		background-color: #f43e43;
+		color: #fff;
+		font-size: .4rem;
+		.tc;
+	}
+}
+.vssd-hd-add {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-pack: center;
+	box-sizing: border-box;
+	width: 2.05rem;
+	height: 2.35rem;
+	margin: .2rem .1rem;
+	border: 1px solid @mainBorder;
+	.tc;
+	&.hide {
+		display: none;
+	}
+}
+.vssd-hd-add-icon {
+	font-size: 1.2rem;
+	color: #ddd;
+}
+.vssd-hd-add-name {
+	font-size: .36rem;
+}
+//主體內容
+.vssd-main {
+	width: 100%;
+	overflow: auto;
+}
+.vssd-item {
+	
+}
+.vssd-item-title {
+	padding-left: .2rem;
+	height: .6rem;
+	line-height: .6rem;
+	font-size: .32rem;
+	background-color: #f5f5f9;
+	z-index: 2;
+}
+.vssd-item-title-name {
+	.pa;
+	left: .2rem;
+}
+.vssd-item-title-info {
+	.pa;
+	right: .2rem;
+}
+.vssd-item-table {
+	td {
+		box-sizing: border-box;
+		width: @tdWidth;
+		height: @tdHeight;
+		font-size: .3rem;
+		word-break: break-all;
+	}
+}
+.vssd-item-left {
+	.pa;
+	left: 0;
+	background-color: #fff;
+	z-index: 1;
+	td {
+		border: 1px solid @mainBorder;
+		border-width: 0 1px 1px 0;
+		.tc;
+	}
+}
+.vssd-item-right {
+	margin-left: @tdWidth;
+	border-right: 1px solid @mainBorder;
+	background-color: #fff;
+	td {
+		border: 1px solid @mainBorder;
+		border-width: 0 0 1px 1px;
+		&.light {
+			background-color: #f7f9d2;
+		}
+	}
+}
+.vssd-item-right-inner {
+	box-sizing: border-box;
+	width: @tdWidth;
+	padding: 0 .1rem;
+}
+//快捷入口
+.vssd-entry {
+	.fx;
+	right: .5rem;
+	bottom: .5rem;
+	z-index: 5;
+}
+.vssd-entry-list {
+	width: 4rem;
+	border: 1px solid #d5d5d5;
+	border-radius: 2px;
+	background-color: #fff;
+	font-size: .26rem;
+}
+.vssd-entry-item {
+	.fl;
+	width: 50%;
+	line-height: .7rem;
+	.tc;
+	color: #7e7e7e;
+}
+.vssd-entry-triangle {
+	.pr;
+	height: .35rem;
+	span {
+		.pa;
+		right: .15rem;
+		top: -1px;
+		width: .48rem;
+		height: .28rem;
+		background: url("@{vsImg}/vssd-entry-triangle.png") no-repeat;
+		background-size: cover;
+	}
+}
+.vssd-entry-btn {
+	.fr;
+	display: table;
+	width: .72rem;
+	height: .52rem;
+	padding-top: .2rem;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	background-color: #fff;
+	span {
+		.block;
+		width: .4rem;
+		height: .04rem;
+		margin: 0 auto .1rem;
+		background-color: #5689d0;
+	}
+}

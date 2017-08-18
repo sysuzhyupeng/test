@@ -1,0 +1,436 @@
+@import "base.less";
+/*********************** 文章詳情頁 ********************/
+@hpImgUrl: '../img/home';
+//頂部
+.hp-hd {
+	.pr;
+	box-sizing: border-box;
+	height: .9rem;
+	padding: .25rem;
+	background-color: #fff;
+}
+.hp-hd-logo {
+	.fl;
+	width: 1.9rem;
+	height: .4rem;
+	background: url("@{hpImgUrl}/hp-logo.png") no-repeat;
+	background-size: cover;
+}
+.hp-hd-icon {
+	.fr;
+	width: .4rem;
+	height: .4rem;
+	background: url("@{hpImgUrl}/hp-member.png") no-repeat;
+	background-size: cover;
+}
+.hp-hd-down {
+	.fr;
+	margin-right: .25rem;
+	line-height: .4rem;
+	color: @mainTextColor;
+}
+//導航
+.hp-nav {
+	background-color: @mainTextColor;
+}
+.hp-nav-item {
+	.fl;
+	box-sizing: border-box;
+	width: 25%;
+	height: .7rem;
+	line-height: .7rem;
+	border: 1px solid #214a8c;
+	border-width: 1px 0 0 1px;
+	margin: -1px 0 0 -1px;
+	.tc;
+	color: #fff;
+}
+//搜索框
+.hp-search {
+	.pr;
+	padding: .4rem;
+	background-color: #fff;
+	input {
+		.block;
+		box-sizing: border-box;
+		width: 100%;
+		height: .6rem;
+		padding: 0 1.2rem 0 .1rem;
+		border: 1px solid #999;
+		font-size: .3rem;
+	}
+	span {
+		.pa;
+		right: .4rem;
+		top: .4rem;
+		width: 1.2rem;
+		height: .6rem;
+		background-color: @mainTextColor;
+	}
+	i {
+		.block;
+		width: .32rem;
+		height: .31rem;
+		margin: .14rem auto;
+		background: url("@{hpImgUrl}/hp-search.png") no-repeat;
+		background-size: cover;
+	}
+}
+//熱門廠牌、按價格、熱門車
+.hp-tab-nav {
+	display: -webkit-box;
+	-webkit-box-pack: justify;
+	background-color: #fff;
+	border-bottom: 1px solid @mainBorder;
+	li {
+		padding: 0 .1rem .3rem;
+		&.at {
+			margin-bottom: -1px;
+			border-bottom: 1px solid @mainTextColor;
+			color: @mainTextColor
+		}
+	}
+}
+.hp-tab-main {
+	background-color: #fff;
+}
+.hp-tab-price {
+	padding: 0 .2rem;
+}
+.hp-tab-price-list {
+	padding: .2rem 0;
+}
+.hp-tab-price-item {
+	.fl;
+	width: 33.33%;
+	line-height: 1.1rem;
+	text-align: center;
+}
+.hp-tab-price-more {
+	.block;
+	border-top: 1px solid @mainBorder;
+	line-height: .9rem;
+	.tc;
+}
+//首頁公共頭部
+.hp-title {
+	padding: 0 .2rem;
+	margin-top: .2rem;
+	line-height: .95rem;
+	background-color: #fff;
+}
+.hp-title-name {
+	color: #000;
+}
+.hp-title-more {
+	.fr;
+	color: #999;
+	font-size: .3rem;
+}
+//深度解析
+.hp-topic {
+	display: -webkit-box;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0 .2rem .2rem .2rem;
+	background-color: #fff;
+	overflow: auto;
+}
+.hp-topic-item {
+	padding-right: .2rem;
+}
+.hp-topic-link {
+	.pr;
+	.block;
+	width: 5.1rem;
+	height: 3.4rem;
+	img {
+		.block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	p {
+		.pa;
+		left: 0;
+		bottom: 0;
+		box-sizing: border-box;
+		width: 100%;
+		padding: 0 .2rem;
+		line-height: .64rem;
+		background-color: rgba(0, 0, 0, 0.5);
+		color: #fff;
+		.ellipsis;
+	}
+}
+//資訊
+.hp-art-tab {
+	display: -webkit-box;
+	-webkit-box-pack: justify;
+	margin-top: .2rem;
+	border-bottom: 1px solid @mainBorder;
+	background-color: #fff;
+	li {
+		padding: 0 .1rem;
+		line-height: .9rem;
+		.tc;
+		&.at {
+			color: @mainTextColor;
+			border-bottom: 1px solid @mainTextColor;
+			margin-bottom: -1px;
+		}
+	}
+}
+.hp-art-flash {
+	.pr;
+	height: .72rem;
+	padding: .2rem 0 .2rem 1.9rem;
+	background-color: #fff;
+	dt {
+		.pa;
+		left: .2rem;
+		top: .2rem;
+		width: 1.7rem;
+		height: .6rem;
+		line-height: .6rem;
+		margin-top: .1rem;
+		border-right: 1px solid @mainBorder;
+		color: @mainColor;
+		.fb;
+	}
+}
+.hp-art-swipe {
+	padding: 0 .2rem;
+}
+.hp-art-swipe-item {
+	display: -webkit-box;
+	-webkit-box-align: center;
+	height: .72rem;
+	line-height: .36rem;
+	color: @mainColor;
+}
+.hp-art-main {
+	border: 1px solid @mainBorder;
+	border-width: 1px 0 1px 0;
+	background-color: #fff;
+}
+.hp-art-more {
+	.block;
+	line-height: .8rem;
+	.tc;
+	color: @mainTextColor;
+	background-color: #fff;
+	font-size: .3rem;
+}
+//銷售排行
+.hp-sale-tab {
+	padding: .2rem 0;
+	border: 1px solid @mainBorder;
+	border-width: 1px 0;
+	background-color: #fff;
+	li {
+		.fl;
+		width: 50%;
+		.tc;
+		&.at {
+			color: @mainTextColor;
+		}
+	}
+}
+.hp-sale-main {
+	background-color: #fff;
+}
+//新車上市
+.hp-listed {
+	display: -webkit-box;
+	box-sizing: border-box;
+	width: 100%;
+	padding-left: .2rem;
+	background-color: #fff;
+	overflow: auto;
+}
+.hp-listed-item {
+	.block;
+	padding: 0 .2rem .2rem 0;
+	margin-right: .3rem;
+	background-color: #fff;
+	width: 2.4rem;
+}
+.hp-listed-pic {
+	.block;
+	width: 2.4rem;
+	height: 1.6rem;
+	object-fit: cover;
+}
+.hp-listed-title {
+	margin-top: .2rem;
+	font-size: .3rem;
+	.ellipsis;
+	.tc;
+}
+.hp-listed-price {
+	margin-top: .2rem;
+	font-size: .28rem;
+	color: @mainColor;
+	.tc;
+}
+.hp-listed-time {
+	margin-top: .2rem;
+	font-size: .26rem;
+	color: #999;
+	.tc;
+}
+
+.hp-unListed {
+	padding-left: .5rem;
+	border-top: 1px solid @mainBorder;
+	background-color: #fff;
+}
+.hp-unListed-inner {
+	border-left: 1px solid @mainBorder;
+}
+.hp-unListed-item {
+	.block;
+	padding-bottom: .3rem;
+	line-height: .4rem;
+	&:first-child {
+		padding-top: .3rem;
+	}
+}
+.hp-unListed-circle {
+	.fl;
+	width: .12rem;
+	height: .12rem;
+	margin: .14rem 0 0 -.07rem;
+	border-radius: 50%;
+	background-color: #7d97c3;
+}
+.hp-unListed-date {
+	.fl;
+	margin: 0 .3rem;
+	color: @mainColor;
+	font-size: .3rem;
+}
+.hp-unListed-title {
+	.fl;
+	font-size: .28rem;
+}
+//猜你喜歡
+.hp-guess {
+	background-color: #fff;
+}
+.hp-guess-item {
+	.fl;
+	box-sizing: border-box;
+	width: 50%;
+	padding: .2rem;
+}
+.hp-guess-img {
+	.block;
+	width: 2.25rem;
+	height: 1.5rem;
+	.auto;
+	object-fit: cover;
+}
+.hp-guess-title {
+	margin: .2rem 0;
+	font-size: .3rem;
+	.tc;
+	.ellipsis;
+}
+.hp-guess-price {
+	color: @mainColor;
+	font-size: .3rem;
+	.tc;
+}
+//汽車影音
+.hp-movie {
+	display: -webkit-box;
+	box-sizing: border-box;
+	width: 100%;
+	padding-left: .2rem;
+	background-color: #fff;
+	overflow: auto;
+}
+.hp-movie-item {
+	.block;
+	width: 2.7rem;
+	padding: 0 .2rem .2rem 0;
+}
+.hp-movie-pic {
+	.pr;
+	width: 2.7rem;
+	height: 1.8rem;
+}
+.hp-movie-img {
+	.block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.hp-movie-icon {
+	.pa;
+	left: 50%;
+	top: 50%;
+	width: .68rem;
+	height: .4rem;
+	margin: -.2rem 0 0 -.34rem;
+	background: url("@{hpImgUrl}/hp-video.png") no-repeat;
+	background-size: cover;
+	z-index: 1;
+}
+.hp-movie-title {
+	margin-top: .2rem;
+	font-size: .3rem;
+	line-height: .34rem;
+	word-break: break-all;
+}
+//汽車圖庫
+.hp-pciture {
+	padding: 0 .1rem .2rem .2rem;
+	background-color: #fff;
+}
+.hp-pciture-item {
+	.fl;
+	width: 2.3rem;
+	height: 1.5rem;
+	margin: 0 .1rem .1rem 0;
+	&:first-child {
+		width: 4.7rem;
+		height: 3.1rem;
+	}
+}
+.hp-pciture-img {
+	.block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+//推薦APP
+.hp-app {
+	display: -webkit-box;
+	-webkit-box-pack: justify;
+	box-sizing: border-box;
+	width: 100%;
+	padding-bottom: .2rem;
+	background-color: #fff;
+	overflow: auto;
+}
+.hp-app-item {
+	.block;
+	width: .8rem;
+	height: .8rem;
+}
+.hp-app-img {
+	.block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.none {
+	display: none !important;
+}
+.download-none {
+	display: none;
+}

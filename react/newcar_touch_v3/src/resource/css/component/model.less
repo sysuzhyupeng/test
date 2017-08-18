@@ -1,0 +1,42 @@
+.model-tab {
+	display: -webkit-box;
+	width: 100%;
+	overflow: auto;
+}
+.model-tab-item {
+    box-sizing: border-box;
+    width: 19%;
+    line-height: .8rem;
+    color: #999;
+	.tc;
+    &.at {
+        color: @mainTextColor;
+        border-bottom: 3px solid @mainTextColor;
+    }
+}
+
+.model-main-item {
+	.pr;
+	.block;
+	padding: .2rem 1.5rem .2rem .2rem;
+	margin-bottom: .2rem;
+	background-color: #fff;
+}
+.model-main-full {
+	font-size: .34rem;
+	.fb;
+}
+.model-main-info {
+	margin-top: .2rem;
+	span {
+		margin-right: .2rem;
+		color: #999;
+	}
+}
+.model-main-price {
+	.pa;
+	right: .4rem;
+	top: .5rem;
+	font-size: .4rem;
+	color: red;
+}

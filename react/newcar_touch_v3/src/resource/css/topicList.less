@@ -1,0 +1,188 @@
+@import "base.less";
+/*********************** 深度解析列表頁 ********************/
+//概覽
+.tplist-wrap {
+	background-color: #f0f0f0;
+}
+.tpls-ov {
+	.block;
+	width: 6.9rem;
+	background-color: #fff;
+	margin: 0 auto;
+	margin-bottom: .2rem;
+	padding: 0.2rem 0.2rem 0.3rem 0.2rem;
+}
+.tpls-ov-pic {
+    // width: 7.1rem;
+	height: 4.38rem;
+	line-height: 4.38rem;
+	text-align: center;
+	position: relative;
+	background: url('../img/nopic-86-86.png') center center no-repeat;
+	background-size: 86%;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+.tpls-ov-title {
+	background-color: #4c4c4c;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	text-align: center;
+	color: #fff;
+	font-size: 0.36rem;
+	font-weight: bold;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0rem;
+}
+.tpls-ov-content {
+	margin-top: 0.25rem;
+	font-size: 0.30rem;
+	position: relative;
+}
+.tpls-ov-desp {
+	color: #999999;
+	margin-top: 0.15rem;
+	font-size: 0.26rem;
+}
+.tpls-ov-text {
+	line-height: 0.48rem;
+}
+.tpls-ov-check {
+	color: #3365e3;
+	background-color: #fff;
+	padding: 0.1rem 0.1rem 0.1rem 0.2rem;
+	position: absolute;
+	right: 0.0rem;
+    bottom: -0.01rem;
+}
+.tpls-ov-view {
+	.fl;
+	padding-left: 0.48rem;
+	position: relative;
+	i {
+		position: absolute;
+		top: -0.01rem;
+		left: 0rem;
+		display: inline-block;
+		width: 0.48rem;
+		height: 0.31rem;
+		background: url('../img/view.png') no-repeat;
+		background-size: 100%;
+		background-position: 0rem -0.08rem;
+	}
+}
+.tpls-ov-date {
+	.fr;
+}
+
+//列表
+.tpls-item {
+	width: 7.1rem;
+	background-color: #fff;
+	margin: 0 auto;
+	height: 1.82rem;
+	padding: 0.2rem 0rem 0.2rem 0.2rem;
+	// border-bottom: 1px solid #f0f0f0;
+}
+.tpls-pic {
+	.fl;
+	margin-left: 0.1rem;
+	height: 1.82rem;
+	width: 2.73rem;
+	text-align: center;
+	line-height: 2.06rem;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+.tpls-title {
+	font-size: 0.30rem;
+	line-height: 0.44rem;
+	color: #333333;
+	margin-bottom: 0.17rem;
+}
+.tpls-info {
+	.fl;
+	position: relative;
+	margin-left: 0.2rem;
+	width: 4.0rem;
+	height: 1.96rem;
+}
+.tpls-desp {
+	position: absolute;
+	left: 0;
+    bottom: 0.3rem;
+	width: 100%;
+	font-size: 0.26rem;
+	color: #999999;
+}
+.tpls-view {
+	.tpls-ov-view;
+}
+.tpls-date {
+	.tpls-ov-date;
+	margin-right: 0.15rem;
+}
+
+//搜索
+.tpls-search-item {
+	li {
+		.fl;
+		background-color: #fff;
+		border: 1px solid #eee;
+		color: #666;
+		margin-top: 0.2rem;
+		font-size: 0.28rem;
+		padding: 0.2rem 0.2rem;
+		border-radius: 0.3rem;
+		margin-left: 0.2rem;
+	}
+}
+.tpls-search-title {
+	.pr;
+	font-size: .3rem;
+	padding: 0.35rem 0rem 0.1rem 0.2rem;
+	color: #666;
+}
+.tpls-search-clear {
+	.pa;
+	right: 0.39rem;
+    top: 0.36rem;
+    width: 0.36rem;
+    height: 0.38rem;
+	background: url('../img/clear.png') no-repeat;
+	background-size: 100%;
+}
+.tpls-search-none {
+	text-align: center;
+    margin-top: 32%;
+}
+.tpls-search-find {
+	background: url('../img/search-none.png') no-repeat;
+	width: 3.5rem;
+	height: 3.5rem;
+	display: inline-block;
+    margin-left: -0.3rem;
+	background-size: 100%;
+}
+.tpls-search-find-text {
+	color: #666;
+	font-size: .4rem;
+	margin-top: .1rem;
+}
+.tpls-search-main {
+	margin-top: 0.1rem;
+}
+.tpls-search-wrap {
+    .tpls-pic {
+    	margin-left: 0rem;
+    }
+    .tpls-info {
+    	margin-left: 0.3rem;
+    }
+}

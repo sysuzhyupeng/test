@@ -1,0 +1,67 @@
+# APP_NAME - 應用名稱
+# POD_NUM  - 應用實例數量
+# DEPLOY   - 是否發布到線上 
+variables:
+  APP_NAME: newcar-touch-v3
+
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  script:
+    - sh _build/build.sh
+  only:
+    - /^(feature|release|hotfix)\/.*$/
+    - /^\d+\.\d+\.\d+$/
+    - /^task.[\d\.]+$/
+  tags:
+    - t8891
+
+run-test:
+  stage: test
+  when: manual
+  environment:
+    name: test/$CI_COMMIT_REF_NAME
+    url: https://c.8891.com.tw/newcartouchv3/$CI_ENVIRONMENT_SLUG
+  variables:
+    POD_NUM: "1"
+  script:
+    - sh _deploy/run.sh
+  only:
+    - /^(feature|release|hotfix)\/.*$/
+  tags:
+    - t8891
+
+stop-test:
+  stage: test
+  when: manual
+  script:
+    - sh _deploy/stop.sh
+  environment:
+    name: test/$CI_COMMIT_REF_NAME
+    action: stop
+  only:
+    - /^(feature|release|hotfix)\/.*$/
+  tags:
+    - t8891
+
+run-deploy:
+  stage: deploy
+  environment:
+    name: production
+    url: https://c.8891.com.tw/m/
+  variables:
+    POD_NUM: "3"
+    DEPLOY: "1"
+  script:
+    - sh _deploy/run.sh
+  only:
+    - /^\d+\.\d+\.\d+$/
+    - /^task.[\d\.]+$/
+  tags:
+    - t8891
+
+    

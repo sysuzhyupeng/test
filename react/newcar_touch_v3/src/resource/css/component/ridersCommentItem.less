@@ -1,0 +1,99 @@
+.rdc-item {
+	.pr;
+	.block;
+	padding: .3rem 0 .3rem 1.1rem;
+	border-top: 1px solid @mainBorder;
+}
+.rdc-item-portrait {
+	.pa;
+	left: 0;
+	top: .3rem;
+	img {
+		.block;
+		width: .8rem;
+		height: .8rem;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+}
+.rdc-item-main {
+	dd {
+		margin-top: .3rem;
+	}
+}
+.rdc-item-name {
+	font-size: .36rem;
+}
+.rdc-item-star {
+	.fr;
+    line-height: .4rem;
+	i {
+        .fl;
+        width: .4rem;
+        height: .4rem;
+        margin-right: .05rem;
+        background: url(../../img/component/star.png) no-repeat;
+        background-size: cover;
+        &.at {
+            background: url(../../img/component/star-at.png) no-repeat;
+            background-size: cover;
+        }
+    }
+    span {
+    	color: #999;
+    }
+}
+.rdc-item-kind {
+	color: #999;
+	font-size: .28rem;
+}
+.rdc-item-content {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+	margin-top: .2rem;
+	line-height: .5rem;
+	color: #333;
+    font-size: .3rem;
+}
+.rdc-item-more {
+    .block;
+    margin-top: .2rem;
+    color: @mainTextColor;
+}
+.rdc-item-info {
+	margin-top: .2rem;
+	color: #999;
+}
+.rdc-item-date {
+	font-size: .28rem;
+}
+
+.rdc-item-sup {
+	.fr;
+}
+.rdc-item-sup-li {
+    .fl;
+    padding: 0 .2rem;
+    height: .35rem;
+    line-height: .35rem;
+    i {
+        .fl;
+        width: .35rem;
+        height: .35rem;
+        margin: 0 .1rem 0 0;
+        &.zan {
+            background: url(../../img/component/cmt-zan-big.png) no-repeat;
+            background-size: cover;
+        }
+        &.evaluate {
+            background: url(../../img/component/cmt-eva-big.png) no-repeat;
+            background-size: cover;
+        }
+    }
+    span {
+        color: #999;
+        font-size: .3rem;
+    }
+}

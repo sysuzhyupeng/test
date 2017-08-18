@@ -1,0 +1,23 @@
+/**
+ * 箭头 .arrow
+ *
+ * @param @w				寬度
+ * @param @h                高度
+ * @param @bw				邊框寬度
+ * @param @c                邊框顏色
+ * @param @deg				旋轉角度
+ *
+ * @example 
+ *      .arrow(7px, 7px, 1px, #333, -135deg);
+ */
+.arrow(@w: .2rem, @h: .2rem, @bw: 2px, @c: #000, @deg: -45deg){
+    .block;
+    border: @bw solid @c;
+    border-right: none;
+    border-bottom: none;
+    content: " ";
+    width: @w;
+    height: @h;
+    transform: rotate(@deg);
+    -webkit-transform: rotate(@deg);
+}

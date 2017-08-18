@@ -1,0 +1,242 @@
+@import "base.less";
+/*********************** 深度解析頁 ********************/
+//導航
+.tp-wrap, .tp-wrap-cmt {
+	.am-navbar {
+		border-bottom: 1px solid @mainBorder;
+		background-color: #f0f0f0;
+		color: #000;
+		.fb;
+	}
+}
+.tp-inner {
+	background-color: #fff;
+}
+.tp-nav {
+	display: -webkit-box;
+	top: 0;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: @max-width;
+	padding: .2rem;
+	overflow: scroll;
+	background-color: #f0f0f0;
+}
+.tp-nav-li {
+	margin-right: .2rem;
+}
+.tp-nav-link {
+	.block;
+	padding: .05rem .1rem;
+	color: #666;
+	&.at {
+		background-color: @mainTextColor;
+		color: #fff;
+	}
+}
+//iframe文章
+.tp-iframe {
+	.block;
+	width: 100%;
+	min-height: 15rem;
+	border: 0;
+	background-color: #fff;
+}
+//公共標題
+.tp-title {
+	padding-top: .3rem;
+    margin-top: .3rem;
+    background-color: #fff
+}
+.tp-title-btn {
+    .fl;
+    width: .1rem;
+    height: .4rem;
+    margin-right: .15rem;
+    background-color: #2c61ad;
+}
+.tp-title-name {
+	line-height: .4rem;
+	font-weight: bold;
+    font-size: .42rem;
+}
+//相關車款
+.tp-kind {
+	padding: .2rem;
+	margin-top: .2rem;
+	background-color: #fff;
+	margin-bottom: 50px;
+	position: relative;
+}
+.detial-btn {
+	position: absolute;
+	top: .9rem;
+	right: .2rem;
+	background: #2E599E;
+	color: #fff;
+	width: 1.4rem;
+	height: .5rem;
+	line-height: .53rem;
+	text-align: center;
+	font-size: .27rem;
+}
+.tp-kind-title {
+	.fb;
+}
+.tp-kind-link {
+	.block;
+	margin-top: .2rem;
+}
+.tp-kind-pic {
+	.fl;
+	width: 2.25rem;
+	height: 1.5rem;
+	margin-right: .2rem;
+	object-fit: cover;
+}
+.tp-kind-dl {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-pack: justify;
+	height: 1.5rem;
+	dd {
+		color: #f00;
+	}
+}
+.tp-kind-item {
+	padding: .15rem 0;
+	margin-top: .2rem;
+	border: 1px solid @mainBorder;
+	border-radius: .05rem;
+	a {
+		.fl;
+		box-sizing: border-box;
+		width: 33.33%;
+		border-left: 1px solid @mainBorder;
+		.tc;
+		font-size: .27rem;
+		color: #3f69af;
+		&:first-child {
+			border-left: 0;
+		}
+	}
+}
+//底部按鈕
+.tp-foot {
+	.fx;
+	left: 0;
+	bottom: 0;
+	box-sizing: border-box;
+	width: 100%;
+	height: .81rem;
+	padding: .15rem;
+	background-color: #f4f4f4;
+	border-top: 1px solid @mainBorder;
+	z-index: 1;
+}
+.tp-foot-li {
+	.fl;
+	box-sizing: border-box;
+	width: 50%;
+	border-left: 1px solid @mainTextColor;
+	color: @mainTextColor;
+	.tc;
+	&:first-child {
+		border-left: 0;
+	}
+	i {
+		.inline-block;
+		width: .5rem;
+		height: .5rem;
+		margin-right: .15rem;
+		background: url(../img/discuss-icon.png) no-repeat;
+		background-size: 100%;
+		vertical-align: middle;
+		&.comment {
+			background-position: 0 -5rem;
+		}
+		&.share {
+			background-position: 0 -5.5rem;
+		}
+	}
+	span {
+		.inline-block;
+		vertical-align: middle;
+	}
+}
+//圖片輪播
+.tp-photo-wrap {
+	.fx;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	z-index: 10;
+}
+.tp-photo {
+	height: 100% !important;
+	background: #000;
+	& > div {
+		.block;
+		width: 100%;
+		img {
+			.pa;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			width: 100%;
+			vertical-align: top;
+		}
+		p {
+			.pa;
+			bottom: 0;
+			padding: .2rem;
+			line-height: .48rem;
+			color: #fff;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+	}
+	.slider-frame {
+		height: 100% !important;
+	}
+	.slider-list {
+		height: 100% !important;
+		min-height: 5rem;
+		overflow: initial !important;
+	}
+	.slider-slide {
+		height: 100% !important;
+	}
+}
+.tp-photo-delete {
+	.pa;
+    left: 0;
+    top: 0;
+    padding-left: .2rem;
+    font-size: .72rem;
+    color: #fff;
+    z-index: 1;
+}
+.tp-photo-number {
+	margin-right: .2rem;
+	span {
+		font-size: .48rem;
+	}
+}
+
+.tp-next {
+	padding: 0 .3rem;
+	background: #fff;
+	.btn {
+		height: 1.1rem;
+	    border: 0;
+	    border-top: 1px solid #eee;
+	    border-radius: 0;
+	    color: #3f69af;
+	}
+	.arrow {
+		.arrow(.2rem, .2rem, 2px, #3f69af, -135deg);
+		.inline-block;
+		margin: 0 0 .05rem .1rem;
+	}
+}

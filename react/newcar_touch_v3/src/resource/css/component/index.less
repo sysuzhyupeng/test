@@ -1,0 +1,453 @@
+@cpImg: '../../img/component';
+//loading图
+.loadingImg {
+	.pr;
+	box-sizing: border-box;
+	width: 100%;
+	padding: .2rem 0;
+	background-color: #fff;
+	&.max {
+		padding: 1rem 0;
+	}
+}
+.loadingImg img {
+	.block;
+	width: .5rem;
+	height: .5rem;
+	margin: 0 auto;
+}
+   //回到頂部
+   .backto-wrap {
+       .fx;
+
+      right: .2rem;
+      bottom: 1.5rem;
+      width: .7rem;
+      height: .7rem;
+      background-color: #fff;
+      z-index: 9;
+      border-radius: 50%;
+      border: 1px solid #dedede;
+   }
+   .backto-one {
+      width: .4rem;
+  }
+   .backto-arrow {
+      width: .25rem;
+      height: .25rem;
+
+
+     border: 3px solid #A9A9A9;
+     border-right: none;
+     border-bottom: none;
+     content: " ";
+     -webkit-transform: rotate(45deg);
+     margin-top: .29rem;
+      margin-left: .21rem;
+   }
+//谷歌廣告
+.google-ad {
+	.block;
+	-webkit-transform-origin-x: 0;
+	-webkit-transform-origin-y: 0;
+}
+
+//競爭車款
+.autocar-item {
+	.fl;
+	width: 2.22rem;
+	margin-right: .2rem;
+	.tc;
+	img {
+		.block;
+		width: 100%;
+		height: 1.46rem;
+		object-fit: cover;
+	}
+	div {
+		margin: .2rem 0;
+		font-size: .3rem;
+		.ellipsis;
+	}
+	p {
+		color: #dd3b3f;
+		font-size: .3rem;
+		.ellipsis;
+	}
+}
+
+//經銷商列表
+.orderitem-wrap {
+	padding-top: .37rem;
+	background-color: #fff;
+	padding-bottom: .37rem;
+	border-bottom: 1px solid @mainBorder;
+}
+.orderitem-left {
+   .fl;
+   position: relative;
+   padding-left: 1rem;
+   width: 5.17rem;
+}
+.orderitem-photo {
+	position: absolute;
+	left: .2rem;
+	top: .35rem;
+	width: .6rem;
+	img {
+		width: 100%;
+	}
+}
+.orderitem-brand {
+	font-size: .3rem;
+}
+.orderitem-address {
+	font-size: .28rem;
+	max-width: 5rem;
+	margin-top: .2rem;
+	color: #666;
+}
+.orderitem-btn {
+	display: inline-block;
+	position: relative;
+	i {
+		position: absolute;
+		left: -.07rem;
+		top: -.35rem;
+		width: .5rem;
+		height: .5rem;
+		background: url('../../img/order/position.png') no-repeat;
+		background-size: 100%;
+	}
+}
+.orderitem-tel {
+	margin-top: .2rem;
+	font-size: .28rem;
+	color: #666;
+	span {
+		color: #999;
+	}
+}
+.orderitem-right {
+	.fl;
+	height: 1.34rem;
+	width: 1.3rem;
+	border-left: 1px solid @mainBorder;
+	text-align: center;
+}
+.orderitem-call {
+	margin-top: .3rem;
+	display: inline-block;
+	width: .4rem;
+	height: .4rem;
+	background: url('../../img/order/tel.png') no-repeat;
+	background-size: 100%;
+}
+.orderitem-dial {
+	color: #6fa9ff;
+	font-size: .28rem;
+}
+
+//熱門廠牌
+.hotbrd-wrap {
+    padding-top: .3rem;
+    background-color: #fff;
+}
+.hotbrd-item {
+    width: 20%;
+    margin-bottom: .2rem;
+    .tc;
+}
+.hotbrd-img {
+    .block;
+    width: .8rem;
+    height: .8rem;
+    object-fit: cover;
+    margin: 0 auto;
+}
+.hotbrd-title {
+    line-height: .6rem;
+    font-size: .3rem;
+    .ellipsis;
+}
+.hotbrd-more {
+	.block;
+	width: .8rem;
+	height: .8rem;
+    margin: 0 auto;
+	background: url("@{cpImg}/brand-more.png") no-repeat;
+	background-size: cover;
+}
+
+//熱門車
+.hotmod-wrap {
+	padding: .2rem 0 0 .57rem;
+}
+.hotmod-item {
+	.fl;
+	box-sizing: border-box;
+	width: 1.73rem;
+	margin-right: .58rem;
+}
+.hotmod-img {
+	.block;
+	width: 100%;
+	height: 1.15rem;
+	object-fit: cover;
+}
+.hotmod-kind {
+	line-height: .5rem;
+	font-size: .3rem;
+	.tc;
+	.ellipsis;
+}
+
+//文章列表
+.article-item {
+	.pr;
+	.block;
+	padding: .2rem 0;
+	margin: 0 .2rem;
+	border-top: 1px solid @mainBorder;
+	background-color: #fff;
+	&:first-child {
+		border-top: 0;
+	}
+	&:visited {
+		color: #666;
+	}
+}
+.article-img {
+	.fl;
+	width: 1.9rem;
+	height: 1.3rem;
+	object-fit: cover;
+	&:first-child {
+		margin-right: .2rem;
+	}
+}
+.article-params {
+	.pr;
+	.fl;
+	width: 5rem;
+	height: 1.3rem;
+	&:first-child {
+		margin-right: .2rem;
+	}
+}
+.article-title {
+	line-height: .4rem;
+	height: .8rem;
+	overflow: hidden;
+}
+.article-info {
+	.pa;
+	left: 0;
+	bottom: -0.05rem;
+	width: 100%;
+	color: #b8bbbf;
+	font-size: .24rem;
+}
+.article-time {
+	display: inline-block;
+    height: .4rem;
+    line-height: .4rem;
+}
+.browse-icon {
+	background: url("../../img/sum/visit.png");
+	background-repeat: no-repeat;
+	    background-size: 100%;
+	    width: .36rem;
+	    height: .32rem;
+	    display: inline-block;
+	    margin-right: .03rem;
+	    vertical-align: text-bottom;
+}
+//銷售排行
+.sale-item {
+	.block;
+	padding: 0 .2rem .2rem;
+	background-color: #fff;
+	&:first-child {
+		padding-top: .2rem;
+	}
+	&:nth-child(1) {
+		.sale-icon {
+			background-position: 0 0;
+		}
+	}
+	&:nth-child(2) {
+		.sale-icon {
+			background-position: 0 -.3rem;
+		}
+	}
+	&:nth-child(3) {
+		.sale-icon {
+			background-position: 0 -.6rem;
+		}
+	}
+}
+.sale-pic {
+	.pr;
+	.fl;
+	width: 1.9rem;
+	height: 1.3rem;
+	&:first-child {
+		margin-right: .2rem;
+	}
+}
+.sale-img {
+	.block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.sale-icon {
+	.pa;
+	left: 0;
+	top: 0;
+	width: .46rem;
+	height: .21rem;
+	line-height: .21rem;
+	.tc;
+	color: #fff;
+	font-size: .24rem;
+	background: url("@{cpImg}/sale-icon.png") no-repeat;
+	background-size: 100%;
+	background-position: 0 -.9rem;
+}
+.sale-params {
+	.pr;
+	.fl;
+	box-sizing: border-box;
+	width: 5rem;
+	height: 1.3rem;
+	padding-right: 1.4rem;
+	&:first-child {
+		margin-right: .2rem;
+	}
+	dt {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-box-pack: center;
+		height: 1.3rem;
+		font-size: .3rem;
+	}
+	dd {
+		.pa;
+		right: .2rem;
+		top: 0;
+		line-height: 1.3rem;
+		color: #666;
+		font-size: .24rem;
+	}
+}
+.sale-params-price {
+	margin-top: .2rem;
+	color: @mainColor;
+}
+
+//底部
+.foot-wrap {
+	margin-top: .2rem;
+	padding: .3rem 0 1rem;
+	background-color: #fff;
+}
+.foot-item {
+	.fl;
+	width: 33.33%;
+}
+.foot-icon {
+	.block;
+	width: .71rem;
+	height: .71rem;
+	margin: 0 auto;
+	background: url("@{cpImg}/foot-icon.png") no-repeat;
+	background-size: 100%;
+	&.app {
+		background-position: 0 -.8rem;
+	}
+	&.suggest {
+		background-position: 0 -1.6rem;
+	}
+}
+.foot-name {
+	margin-top: .2rem;
+	.tc;
+}
+.foot-info {
+	.tc;
+	margin-top: .3rem;
+	line-height: .4rem;
+	font-size: .24rem;
+	color: #999;
+}
+/*年份選擇樣式*/
+.kindyear {
+	display: block;
+	margin-left: .3rem;
+	padding: .4rem .3rem;
+	border-bottom: 1px solid #D8D8D8;
+}
+
+//404頁面
+.not-wrap {
+	.fx;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fff;
+}
+.not-inner {
+	.pa;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.not-logo {
+	.block;
+	width: 2.9rem;
+	height: 2.34rem;
+	margin: 0 auto .4rem;
+	background: url("@{cpImg}/404-logo.png") no-repeat;
+	background-size: cover;
+}
+.not-link {
+	.block;
+	width: 2.6rem;
+	height: .64rem;
+	margin: .4rem auto 0;
+	border: 1px solid @mainBorder;
+	border-radius: .1rem;
+	line-height: .64rem;
+	.tc;
+	color: #666;
+}
+
+//safari
+.addpage {
+	background: url("@{cpImg}/addpage.png") no-repeat;
+	position: fixed;
+	bottom: 1px;
+	width: 170px;
+	height: 86px;
+	background-size: 100%;
+	left: 50%;
+	margin-left: -90px;
+    z-index: 99999;
+	.addPage-icon {
+		position: absolute;
+		right: 8px;
+		top: 3px;
+		width: 20px;
+		height: 20px;
+		line-height: 23px;
+		background: rgba(0, 0, 0, 0.5);
+		border-radius: 50%;
+		color: #fff;
+		text-align: center;
+		padding-left: 1px;
+	}
+}
+

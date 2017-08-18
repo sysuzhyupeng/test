@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    name: {{RC_NAME}}
+    app: {{APP_NAME}}
+    version: {{VERSION}}
+  name: {{RC_NAME}}
+spec:
+  replicas: {{POD_NUM}}
+  selector:
+    name: {{RC_NAME}}
+  template:
+    metadata:
+      labels:
+        app: {{APP_NAME}}
+        name: {{RC_NAME}}
+    spec:
+      containers:
+      - image: {{IMAGE_NAME}}
+        imagePullPolicy: Always
+        name: {{APP_NAME}}
+      restartPolicy: Always
+      nodeSelector:
+        type: production

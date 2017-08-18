@@ -1,0 +1,315 @@
+@import "base.less";
+/*********************** 預約試駕 ********************/
+//預約頁
+@order-font-blue: #6fa9ff;
+@order-font-grey: #999;
+@order-font-deep-grey: #666;
+@order-border-grey: #f0f0f0;
+@order-bg-grey: #f7f8fa;
+@order-contact-padding: .25rem;
+.order-nav {
+	background-color: @order-bg-grey;
+	line-height: .6rem;
+	height: .6rem;
+	font-size: .28rem;
+}
+.order-show {
+	.fl;
+	margin-left: .25rem;
+}
+.order-choose {
+	.fr;
+	margin-right: .25rem;
+	color: @order-font-blue;
+}
+//城市篩選
+.order-city-wrap {
+	padding-top: .08rem;
+}
+.order-city-content {
+	li {
+		height: .92rem;
+		line-height: .92rem;
+		font-size: .24rem;
+		padding-left: .2rem;
+		border-bottom: 1px solid @order-border-grey;
+	}
+} 
+//預約試駕撥打提示
+.order-tip-wrap {
+	position: fixed;
+    top: 0rem;
+    left: 0rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+.order-tip-inner {
+	position: absolute;
+	background-color: #fff;
+    left: 50%;
+    top: 50%;
+    margin: -2rem 0 0 -2.3rem;
+    width: 4.6rem;
+    border-radius: .07rem;
+    text-align: center;
+}
+.order-tip-header {
+	height: .88rem;
+	line-height: .88rem;
+	font-size: .3rem;
+}
+.order-tip-text {
+	line-height: .3rem;
+	padding:  .2rem 0rem;
+	font-size: .24rem;
+	width: 4.2rem;
+	margin: 0 auto;
+	text-align: left;
+}
+.order-tip-anonymity {
+	border-top: 1px solid @order-border-grey;
+}
+.order-tip-content {
+	display: block;
+	font-size: .26rem;
+	border-top: 1px solid @order-border-grey;
+	line-height: .72rem;
+	height: .72rem;
+	color: @order-font-blue;
+}
+//預約試駕成功提示
+.order-success-wrap {
+	.order-tip-wrap;
+}
+.order-success-inner {
+	position: absolute;
+	background-color: #c5eff7;
+    left: 50%;
+    top: 50%;
+    margin: -2.6rem 0 0 -2.3rem;
+    width: 4.6rem;
+    border-radius: .1rem;
+    text-align: center;
+    padding-top: .1rem;
+    padding-bottom: 1rem;
+}
+.order-success-photo {
+	background: url('../img/order/success.png') no-repeat;
+	width: 2.6rem;
+	height: 2.6rem;
+	margin: 0 auto;
+	background-size: 100%;
+}
+.order-success-info {
+	margin-top: .1rem;
+	margin-bottom: .5rem;
+	font-size: .3rem;
+	padding: 0 .3rem;
+	color: @order-font-grey;
+}
+.order-success-btn {
+	padding: .1rem  .1rem;
+	width: 1.8rem;
+	margin: 0 auto;
+	font-size: .3rem;
+	border-radius: .13rem;
+	background-color: #22a7f0;
+	color: #fff;
+}
+//業務聯繫我
+.order-contact-header {
+	font-size: .24rem;
+	padding-left: @order-contact-padding;
+	line-height: .54rem;
+	height: .54rem;
+}
+.order-contact-data {
+	height: 1.31rem;
+	padding: .12rem 0rem;
+	position: relative;
+	background-color: #fff;
+}
+.order-contact-data-left {
+	position: relative;
+	padding-left: 2.47rem;
+	img {
+		position: absolute;
+		left: @order-contact-padding;
+		width: 2.09rem;
+		height: 1.31rem;
+	}
+}
+.order-contact-data-name {
+	padding-top: .15rem;
+	font-size: .32rem;
+}
+.order-contact-data-price {
+	padding-top: .2rem;
+	font-size: .32rem;
+	color: red;
+}
+.order-contact-data-right {
+	color:@order-font-grey;
+	height: 1.43rem;
+	line-height: 1.43rem;
+	position: absolute;
+	right: .2rem;
+	top: 0rem;
+	font-size: .24rem;
+}
+.order-contact-main {
+}
+.order-contact-type {
+	position: relative;
+	background-color: #fff;
+}
+.order-contact-type-left {
+	height: .9rem;
+	line-height: .9rem;
+	padding-left: @order-contact-padding;
+	font-size: .28rem;
+	color:@order-font-grey;
+}
+.order-contact-type-right {
+	color:@order-font-grey;
+	height: .9rem;
+	line-height: .9rem;
+	position: absolute;
+	right: .2rem;
+	top: 0rem;
+	font-size: .24rem;
+}
+.order-contact-name {
+	border-top: 1px solid @order-border-grey;
+	background-color: #fff;
+	height: .9rem;
+	line-height: .9rem;
+	padding-left: @order-contact-padding;
+	position: relative;
+}
+.order-contact-name-left {
+	font-size: .28rem;
+	span {
+		display: inline-block;
+	}
+	input {
+		height: .9rem;
+		line-height: .9rem;
+		font-size: .28rem;
+		width: 2.59rem;
+		border: none;
+	}
+}
+.order-contact-name-right {
+	position: absolute;
+	right: .08rem;
+	top: 0rem;
+	line-height: .9rem;
+	font-size: .26rem;
+	label {
+		display: inline-block;
+		margin-right: .15rem;
+		margin-left: .07rem;
+		vertical-align: middle;
+	}
+	input {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+.order-contact-city-right {
+	position: absolute;
+	right: .2rem;
+	top: 0rem;
+	font-size: .24rem;
+	color:@order-font-grey;
+}
+.order-contact-tel {
+	.order-contact-name;
+}
+.order-contact-city {
+	.order-contact-name;
+}
+.order-contact-show {
+	padding-left: @order-contact-padding;
+	line-height: .52rem;
+	height: .52rem;
+	font-size: .28rem;
+}
+.order-contact-content {
+	padding: .35rem 0rem .35rem .26rem;
+	position: relative;
+	background-color: #fff;
+	border-bottom: 1px solid @order-border-grey;
+}
+.order-contact-content-wrap {
+	height: 7rem;
+	overflow: scroll;
+}
+.order-contact-content-input {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: .3rem;
+}
+.order-contact-content-right{
+	display: inline-block;
+	vertical-align: middle;
+	width: 6.6rem;
+}
+.order-contact-content-top {
+	line-height: .52rem;
+	span {
+		padding-left: .06rem;
+		font-size: .28rem;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	img {
+		display: inline-block;
+		width: .52rem;
+		vertical-align: middle;
+	}
+}
+.order-contact-content-tel {
+	font-size: .28rem;
+	margin-top: .1rem;
+	line-height: .28rem;
+	span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	i {
+		margin-left: .08rem;
+		vertical-align: middle;
+		display: inline-block;
+		height: .28rem;
+		width: .28rem;
+		background: url('../img/order/call.png') no-repeat;
+		background-size: 100%;
+	}
+}
+.order-contact-content-addr {
+	font-size: .28rem;
+	margin-top: .2rem;
+	position: relative;
+}
+.order-contact-content-check {
+	color: @order-font-blue;
+	position: absolute;
+	right: @order-contact-padding;
+	top: 0rem;
+}
+.order-contact-submit {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	max-width: @max-width;
+	color: #fff;
+	font-size: .36rem;
+	line-height: .8rem;
+	height: .8rem;
+	background-color: #2e599e;
+	text-align: center;
+}
