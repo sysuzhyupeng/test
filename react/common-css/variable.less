@@ -1,0 +1,94 @@
+/* 自定義樣式 */
+//顏色
+@cl-orange: #f60;
+@cl-highlight: #e13a3b;
+@cl-main-text: #333;
+@cl-sub-text: #666;
+@cl-light-text: #999;
+
+// 链接颜色
+@cl-link: #333;
+@cl-visited: @cl-link;
+@cl-hover: @cl-highlight;
+@cl-light-link: #005aa0;
+
+@cl-background-shadow: #f8fbfe;
+@cl-placeholder: #aaa;
+@cl-border: #eee;
+
+// layout
+@screen-width: 1190px;
+@right-width: 310px;
+@left-width: @screen-width - @right-width - 20px;
+
+// 层级
+// 對話框
+@z-index-0: 0;
+@z-index-1: 1;
+@z-index-2: 2;
+@z-index-3: 3;
+
+// 對話框
+@z-index-4: 4;
+@z-index-5: 5;
+@z-index-6: 6;
+@z-index-7: 7;
+
+// 對話框
+@z-index-8: 8;
+@z-index-9: 9;
+@z-index-10: 10;
+@z-index-11: 11;
+
+
+// 浮動導航欄
+@z-index-12: 12;
+@z-index-11: 11;
+@z-index-12: 12;
+@z-index-13: 13;
+@z-index-14: 14;
+@z-index-15: 15;
+@z-index-16: 16;
+
+// 浮動導航欄層級
+.z-index-float-nav(@index) when (1 <= @index) and (@index <= 7) {
+	z-index: @index + 11
+}
+
+// 對話框
+@z-index-17: 17;
+@z-index-18: 18;
+@z-index-19: 19;
+@z-index-20: 20;
+@z-index-21: 21;
+@z-index-22: 22;
+@z-index-23: 23;
+@z-index-24: 24;
+
+// 對話框層級
+.z-index-dialog(@index) when (1 <= @index) and (@index <= 8) {
+	z-index: @index + 16;
+}
+
+// font
+@font-size: 15px;
+@font-size-min: 13px;
+@font-family: 'Helvetica Neue', Helvetica, Arial, STHeiti, 'Microsoft JhengHei', '微軟正黑體', sans-serif;
+@font-family2: '新细明体', Arial, sans-serif;
+
+//圖標路徑
+@images: "../../../img";
+@v3-img: "@{images}/v3";
+
+//響應式佈局大小屏寬度
+@max-width: @screen-width;
+@min-width: 990px;
+
+//背景色漸變（兼容IE8)
+.gradient(@first-color: #ffffff, @end-color: #000000) {
+    background: -ms-linear-gradient(top,@first-color,@end-color);/* IE 10 */
+    background: -moz-linear-gradient(top,@first-color,@end-color);/*火狐*/
+    background: -webkit-linear-gradient(top, @first-color, @end-color);   /*Safari5.1 Chrome 10+*/
+    background: -o-linear-gradient(top, @first-color, @end-color);  /*Opera 11.10+*/
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=@first-color,endColorStr=@end-color); /*IE 6 7 8*/
+}

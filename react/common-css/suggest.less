@@ -1,0 +1,91 @@
+// 改版建議
+.suggest-index-box {
+	background-color: #FFF;
+	border-radius: 5px;
+    position: fixed;
+    right: 40px;
+    bottom: 20px;
+    width: 235px;
+    padding: 10px;
+    overflow: hidden;
+    .z-index-dialog(1);
+
+	.suggest-index-header {
+		margin-bottom: 5px;
+		h2 {
+			font-size: 15px;
+			font-weight: bold;
+		}
+		span {
+			font-size: 13px;
+			color: @cl-sub-text;
+			margin-left: 1px;
+			cursor: pointer;
+
+			.like, .unlike {
+				background: url("@{v3-img}/suggest-like.png") no-repeat;
+				display: inline-block;
+				height: 15px;
+				width: 12px;
+				vertical-align: text-bottom;
+			}
+			.like {
+				background-position: bottom left;
+			}
+			.unlike {
+				background-position: bottom right;
+			}
+			&.active {
+				color: #EA724E;
+				.like {
+					background-position: top left;
+				}
+				.unlike {
+					background-position: top right;
+				}
+			}
+		}
+	}
+
+	.suggest-index-content {
+		textarea {
+			width: 95%;
+			height: 80px;
+			padding: 10px 5px 0;
+			border: 1px solid @cl-border;
+			color: @cl-main-text;
+			font-size: 13px;
+		}
+	}
+
+	.suggest-index-footer {
+		text-align: right;
+	}
+
+	.suggest-index-submit {
+		padding: 5px 20px;
+		border: 1px solid @cl-border;
+		border-radius: 2px;
+		color: @cl-main-text;
+		background: rgb(246,246,246);
+		font-size: 13px;
+	}
+
+	.suggest-tips {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 65%;
+		height: 100%;
+		text-align: center;
+		padding: 80px 40px 0 40px;
+		font-size: 13px;
+		background: rgba(250, 250, 250, 0.9);
+		display: none;
+		color: green;
+	}
+}
+
+@media (max-width: 1690px) {
+	.suggest-index-box { display: none !important; }
+}

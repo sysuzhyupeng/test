@@ -1,0 +1,68 @@
+@import "function";
+@import "variable";
+
+//背景圖
+.v3-bg { display: inline-block; background: url("@{v3-img}/v3-bg.png") 0 0 no-repeat; overflow: hidden; }
+//無圖片背景
+.nopic-small { background: url("@{v3-img}/nopic-77-32.png") center center no-repeat; }
+.nopic-middle { background: url("@{v3-img}/nopic-154-63.png") center center no-repeat; }
+.nopic-big { background: url("@{v3-img}/nopic-308-126.png") center center no-repeat; }
+
+/* CSS reset */
+html{color:#000;background:#FFF;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,strong{padding:0;margin:0; font-family: @font-family; font-weight: normal; }
+body{ margin:0 auto; color: @cl-main-text; font:@font-size/1.2 @font-family; }
+table{ border-collapse:collapse;border-spacing:0; }
+fieldset,img{border:0;}
+ul,li,ol{list-style:none;}
+input{vertical-align: middle;font-size: @font-size;}
+input::-webkit-input-placeholder, input::-moz-placeholder, input:-ms-input-placeholder { color: @cl-placeholder; }
+*{-webkit-tap-highlight-color:@cl-main-text;}
+a { text-decoration:none; color: @cl-link; cursor: pointer; }
+a:hover { color: @cl-hover; }
+button { border: none; color: #fff; background: #EEE; border-radius: 3px; }
+
+.fl { float: left; }
+.fr { float: right; }
+.clearfix {
+    &:before, &:after { content: " "; display: table; }
+    &:after { clear: both; }
+}
+.block { display: block; }
+.hide { display: none; }
+.pr { position: relative; }
+.pa { position: absolute; }
+.fx { position: fixed; }
+.tc { text-align: center; }
+.fb { font-weight: 700; }
+.ellipsis { white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.wrap-width { width: @max-width; margin: 0 auto; }
+.wrap-left { width: @left-width; }
+.wrap-right { width: @right-width; }
+.mt10 { margin-top: 10px; }
+.mt20 { margin-top: 20px; }
+.mb10 { margin-bottom: 10px; }
+.mb20 { margin-bottom: 20px; }
+.mb50 { margin-bottom: 50px; }
+.blk-10 { height: 10px; }
+.blk-20 { height: 20px; }
+.ad-banner { background: #eee; }
+.inb{display: inline-block;}
+
+//template模板異步加載、延遲加載遮罩層
+.loading {
+	.nopic-small;
+	background-color: #FDFDFD;
+	z-index: 1;
+}
+.loading-hide {
+	.hide;
+}
+
+//響應式
+@media (max-width: @max-width) {
+	body { font:@font-size-min/1.2 @font-family; }
+	.wrap-width { width: @min-width; }
+	.wrap-left { width: 740px; }
+	.wrap-right { width: 240px; }
+}
